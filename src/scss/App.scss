@@ -1,3 +1,59 @@
-body {
+:root {
+    --grey: #c4c4c4;
+    --section-color: #5D7A8B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
     font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: revert;
+}
+
+.card {
+    box-shadow: none;
+    border: 1px solid rgb(0,0,0,.125);
+}
+
+.card-header {
+    background-color: var(--grey);
+}
+
+.navbar-item {
+    display: flex;
+}
+
+img {
+    max-width: 500px;
+}
+
+.info {
+    padding-top: 7.5rem;
+}
+
+.skills-section {
+    background: var(--section-color);
+    padding: 7.5rem;
+}
+
+.list-item {
+    margin: 5px 0;
+}
+
+.skill-tile {
+    background-color: rgba(248,245,244,.05);
+    padding: 10px 10px 5px;
+    width: 100px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.count::before {
+    content: attr(data-number)+"\A";
 }
