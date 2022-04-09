@@ -1,11 +1,25 @@
 :root {
     --grey: #c4c4c4;
     --section-color: #5D7A8B;
+    --text-color: #fff;
+    --icon-margin: 0px 5px;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.whitetext {
+    color: var(--text-color);
+}
+
+@mixin blue-background {
+    background: var(--section-color);
+}
+
+@mixin icon-space {
+    margin: var(--icon-margin);
 }
 
 body, html {
@@ -16,6 +30,63 @@ h1, h2, h3, h4, h5, h6 {
     font-size: revert;
 }
 
+button {
+    @include icon-space()
+}
+
+//Navbar
+.navbar-item {
+    display: flex;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+//Main
+.info {
+    padding-top: 10%;
+}
+.info h1 {
+    font-size: 3rem;
+}
+
+.count::before {
+    content: attr(data-number)+"\A";
+}
+
+
+//About
+.about {
+    display: inline-block;
+    text-align: center;
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    padding: 15px 15px;
+    margin: 0 75px 30px;
+}
+
+.about img {
+    width: 300px;
+    display: block;
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    padding: 15px 15px;
+
+}
+
+figcaption {
+    font-weight: 700;
+    font-size: x-large;
+}
+
+//Card
 .card {
     box-shadow: none;
     border: 1px solid rgb(0,0,0,.125);
@@ -23,23 +94,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-header {
     background-color: var(--grey);
+    padding: 10px;
 }
 
-.navbar-item {
-    display: flex;
+.card-header svg {
+    @include icon-space();
 }
 
-img {
-    max-width: 500px;
-}
-
-.info {
-    padding-top: 7.5rem;
-}
-
+//Skills
 .skills-section {
-    background: var(--section-color);
-    padding: 7.5rem;
+    @include blue-background;
+    padding: 15%;
+    @extend .whitetext;
 }
 
 .list-item {
@@ -54,6 +120,40 @@ img {
     border-radius: 8px;
 }
 
-.count::before {
-    content: attr(data-number)+"\A";
+//Resume 
+.resume-section {
+    @include blue-background()
+}
+
+//Contact 
+.contact-section .box {
+    margin-top: -9rem;
+}
+
+.box {
+    background: #083C61;
+    padding: 3rem 2rem;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #083C61;
+    margin-top: -9rem;
+}
+
+/*Footer CSS*/
+
+.footer {
+    @include blue-background;
+    padding-bottom: 1.5rem;
+    @extend .whitetext;
+}
+
+.footer-icons {
+    margin-bottom: 1.5rem;
+}
+
+.footer-icons svg {
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    @include icon-space()
 }
