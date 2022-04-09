@@ -73,18 +73,20 @@ button {
 }
 
 figure {
-    display: inline-block;
-    text-align: center;
-    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    padding: 15px 15px;
-
+    width: 170px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid;
 }
 
 figcaption {
-    font-weight: 700;
-    font-size: x-large;
+    text-align: center;
+    padding: 10px;
 }
+figure img {
+    width: 100%;
+}
+
 
 //Card
 .card {

@@ -8,7 +8,7 @@ export default function Projects () {
         <section className="section skills-section">
             <div className="container has-text-centered">
                 <h2 className="is-uppercase has-text-white">Projects</h2>
-                    <div className="columns is-gapless">
+                    <div className="columns">
                         <div className="column">
                             <figure>
                                 <img src = {travel}/>

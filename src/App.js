@@ -4,7 +4,7 @@ import Main from "./components/Main";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
-// import Projects from "./components/Projects"
+import Projects from "./components/Projects"
 import Resume from "./components/Resume";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import skill from "./data/skill"
@@ -33,7 +33,7 @@ export default function App () {
             <Navbar/>
                 <Main />
                 <About/>
-                {/* <Projects/> */}
+                <Projects/>
                 <section className="container is-fluid has-text-centered">
                     <div className="section container">
                         <h2 className="title is-uppercase">Skills</h2>
