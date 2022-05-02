@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import Navbar from "./components/Navbar"
 import Main from "./components/Main";
 import About from "./components/About";
@@ -12,9 +12,25 @@ import resume from "./data/resume"
 import 'bulma/css/bulma.min.css';
 import "./scss/App.scss"
 import { Icon } from "@iconify/react";
-import Contact from "./components/Contact";
+
 
 export default function App () {
+        const aboutRef = useRef()
+        const skillRef = useRef()
+        const projectRef = useRef()
+        const resumeRef = useRef()
+        const ref = useRef({aboutRef, skillRef, projectRef, resumeRef})
+
+        useEffect(() => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                const entry = entries[0];
+                console.log('entry', entry);
+                console.log('entry.isIntersecting', entry.isIntersecting);
+                
+            })
+            observer.observe(ref.current)
+        }, [])
+
         const services = skill.map(item => {
             return <Skills key={item.id} icon={item.icon} name={item.name}/>
         })
@@ -32,24 +48,24 @@ export default function App () {
         <> 
             <Navbar/>
                 <Main />
-                <About/>
-                <Projects/>
-                <section className="container is-fluid has-text-centered">
+                <About aboutRef={aboutRef}/>
+                <section className="container skills-section is-fluid has-text-centered" 
+                id="skills" ref={skillRef}>
                     <div className="section container">
-                        <h2 className="title is-uppercase">Skills</h2>
+                        <h2 className="title has-text-white is-uppercase">Skills</h2>
                         <ul className="list">
                         {services}
                         </ul>
                     </div>
                 </section>
-                <section className="container is-fluid section resume-section">
+                <Projects id="projects" projectRef={projectRef}/>
+                <section className="container is-fluid section resume-section" id="resume" ref={resumeRef}>
                     <h2 className="title has-text-centered is-uppercase has-text-white">Experience</h2>
                     <VerticalTimeline>
                         {job}
                         {endresume}
                     </VerticalTimeline>
                 </section>
-                <Contact/>
                 <Footer/>
         </>
     )

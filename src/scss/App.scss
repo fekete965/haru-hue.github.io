@@ -1,3 +1,5 @@
+@use "./transitions";
+
 :root {
     --grey: #c4c4c4;
     --section-color: #5D7A8B;
@@ -23,6 +25,10 @@
 }
 
 body, html {
+    scroll-behavior: smooth;
+}
+
+body, html, button {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -30,8 +36,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: revert;
 }
 
+#typewriter {
+    color: #1580BC;
+}
+
 button {
     @include icon-space()
+}
+
+.section {
+    padding: 6rem;
 }
 
 //Navbar
@@ -56,7 +70,6 @@ button {
     content: attr(data-number)+"\A";
 }
 
-
 //About
 .about {
     display: inline-block;
@@ -72,23 +85,15 @@ button {
     display: block;
 }
 
-figure {
-    width: 170px;
-    margin: 10px 0;
-    background-color: white;
-    border: 1px solid;
-}
-
-figcaption {
-    text-align: center;
-    padding: 10px;
-}
 figure img {
-    width: 100%;
+    object-fit: contain;
 }
-
 
 //Card
+.skills-section .card {
+    border-radius: 10px;
+}
+
 .card {
     box-shadow: none;
     border: 1px solid rgb(0,0,0,.125);
@@ -106,7 +111,7 @@ figure img {
 //Skills
 .skills-section {
     @include blue-background;
-    padding: 15%;
+    padding: 5%;
     @extend .whitetext;
 }
 
@@ -127,35 +132,13 @@ figure img {
     @include blue-background()
 }
 
-//Contact 
-.contact-section .box {
-    margin-top: -9rem;
-}
-
-.box {
-    background: #083C61;
-    padding: 3rem 2rem;
-    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #083C61;
-    margin-top: -9rem;
-}
-
 /*Footer CSS*/
-
-.footer {
-    @include blue-background;
-    padding-bottom: 1.5rem;
-    @extend .whitetext;
-}
-
 .footer-icons {
     margin-bottom: 1.5rem;
 }
 
 .footer-icons svg {
-    border: 2px solid var(--text-color);
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
+   font-size: 25px;
+   padding: 10px;
     @include icon-space()
 }

@@ -5,7 +5,7 @@ import { faWhatsapp, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer () {
     return (
-        <footer className="footer has-text-centered">
+        <footer className="footer has-text-centered pb-0">
                 <div className="footer-icons">
                     <FontAwesomeIcon icon={faGithub} />
                     <FontAwesomeIcon icon={faWhatsapp} />

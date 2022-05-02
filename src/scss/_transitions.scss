@@ -1,0 +1,29 @@
+.cv-button {
+    background: linear-gradient(to right, #1580BC 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition:all 0.5s ease;
+}
+
+.cv-button:hover {
+    color: white;
+    background-position: left bottom;
+}
+
+.navbar {
+    transition: .75s all;
+}
+
+.is-fixed-top {
+    animation: smooth 1s;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+@keyframes smooth {
+    from {
+        top: -0.5%
+    }
+    to {
+        top: 0%
+    }
+}
