@@ -14,22 +14,56 @@ import "./scss/App.scss"
 import { Icon } from "@iconify/react";
 
 
-export default function App () {
-        const aboutRef = useRef()
-        const skillRef = useRef()
-        const projectRef = useRef()
-        const resumeRef = useRef()
-        const ref = useRef({aboutRef, skillRef, projectRef, resumeRef})
-
-        useEffect(() => {
-            const observer = new IntersectionObserver((entries, observer) => {
-                const entry = entries[0];
-                console.log('entry', entry);
-                console.log('entry.isIntersecting', entry.isIntersecting);
-                
-            })
-            observer.observe(ref.current)
-        }, [])
+const Sections = {
+    About: "about",
+    Skills: "skills",
+    Projects: "projects",
+    Resume: "resume",
+  };
+  
+const useNavObserver = (section, setSectionInView, observerOptions) => {
+   const elementRef = useRef(null);
+    const aboutElRef = React.useCallback(
+      (node) => {
+        if (elementRef.current) elementRef.current.disconnect();
+  
+        elementRef.current = new IntersectionObserver(
+          (entries, observerOptions) => {
+            if (!entries[0]?.isIntersecting) {
+              setSectionInView(null);
+            } else {
+              setSectionInView(section);
+            }
+          },
+          observerOptions
+        );
+        if (node) {
+          elementRef.current.observe(node);
+        }
+      },
+      [section]
+    );
+  
+    return aboutElRef;
+  };
+  
+  export default function App() {
+    const [sectionInView, setSectionInView] = React.useState(null);
+  
+    const aboutRef = useNavObserver(Sections.About, setSectionInView, {
+      threshold: 0.5,
+    });
+    const skillRef = useNavObserver(Sections.Skills, setSectionInView, {
+      threshold: 0.5,
+    });
+    const projectRef = useNavObserver(Sections.Projects, setSectionInView, {
+      threshold: 0.5,
+    });
+    const resumeRef = useNavObserver(Sections.Resume, setSectionInView, {
+      threshold: 0.5,
+    });
+  
+console.log(sectionInView);
 
         const services = skill.map(item => {
             return <Skills key={item.id} icon={item.icon} name={item.name}/>
@@ -46,7 +80,7 @@ export default function App () {
         )
     return (
         <> 
-            <Navbar/>
+            <Navbar sectionInView={sectionInView}/>
                 <Main />
                 <About aboutRef={aboutRef}/>
                 <section className="container skills-section is-fluid has-text-centered" 

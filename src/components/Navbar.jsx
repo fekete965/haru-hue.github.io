@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 
-export default function Navbar () {
+export default function Navbar ({sectionInView}) {
     const [isActive, setisActive] = React.useState(false)
     const [stickyClass, setStickyClass] = useState('');
 
@@ -40,11 +40,14 @@ export default function Navbar () {
                     <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
                         <ul className={`navbar-menu navbar-end ${isActive ? "is-active" : ""}`}>
                         
-                            <li className={`navbar-item`}
-                            href="#about">About</li>
-                                <li className={`navbar-item`} href="#skills">Skills</li>
-                                <li className={`navbar-item`} href="#projects">Projects</li>
-                                <li className={`navbar-item`} href="#resume">Resume</li>
+                            <li className={`navbar-item ${sectionInView === "about" ? 
+                                "navbar-item active" : ""}`} href="#about">About</li>
+                                <li className={`navbar-item ${sectionInView === "skills" ? 
+                                "navbar-item active" : ""}`} href="#skills">Skills</li>
+                                <li className={`navbar-item ${sectionInView === "projects" ? 
+                                "navbar-item active" : ""}`} href="#projects">Projects</li>
+                                <li className={`navbar-item ${sectionInView === "resume" ? 
+                                "navbar-item active" : ""}`} href="#resume">Resume</li>
                             
                         </ul>
 
