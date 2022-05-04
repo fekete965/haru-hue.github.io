@@ -23,8 +23,8 @@ export default function Navbar ({sectionInView}) {
             <nav className={`navbar ${stickyClass}`} role="navigation" aria-label="main-navigation">
                 <div className="container">
                     <div className="navbar-brand">
-                    <a href = "#" className="navbar-item is-uppercased">Joshua <span className="mt-4">•</span></a>
-                    <a onClick={() => {
+                    <a href = "/#" className="navbar-item is-uppercased">Joshua <span className="mt-4 dot">•</span></a>
+                    <span onClick={() => {
                     setisActive(!isActive);
                     }}
                         role="button"
@@ -35,7 +35,7 @@ export default function Navbar ({sectionInView}) {
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                    </a>
+                    </span>
                 </div>
                     <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
                         <ul className={`navbar-menu navbar-end ${isActive ? "is-active" : ""}`}>

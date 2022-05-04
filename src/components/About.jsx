@@ -5,12 +5,13 @@ import CountUp from 'react-countup';
 
 export default function About ({aboutRef}) {
     return (
+        <>
         <section className="section" id="about" ref={aboutRef}>
            <div className="container">
             <div className="columns is-centered">
                     <div className="column pl-5 mb-5">
                             <figure className="about">
-                                <img src = {programmer}/>
+                                <img src = {programmer} alt="Joshua"/>
                                 <figcaption>Joshua 😄</figcaption>
                             </figure>
                     </div>
@@ -34,35 +35,36 @@ export default function About ({aboutRef}) {
                         </div>
                     </div>
             </div>
-            <div class="level section">
-                    <div class="level-item has-text-centered">
-                        <div>
-                        <p class="title"><CountUp end={17} /></p>
-                        <p class="heading">Projects Completed</p>
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                        <p class="title"><CountUp end={5} /></p>
-                        <p class="heading">Cups of Coffee</p>
-                
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                        <p class="title" data-number="10"><CountUp end={10} /></p>
-                        <p class="heading">Happy Clients</p>
-                        
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                        <p class="title"><CountUp end={3} /></p>
-                        <p class="heading">Years Experienced</p>
-                        </div>
-                    </div>
-                </div>
            </div>
         </section>
+        <section className="level section container is-fluid">
+        <div className="level-item has-text-centered">
+            <div>
+            <p className="title"><CountUp end={17} /></p>
+            <p className="heading">Projects Completed</p>
+            </div>
+        </div>
+        <div className="level-item has-text-centered">
+            <div>
+            <p className="title"><CountUp end={5} /></p>
+            <p className="heading">Cups of Coffee</p>
+    
+            </div>
+        </div>
+        <div className="level-item has-text-centered">
+            <div>
+            <p className="title" data-number="10"><CountUp end={10} /></p>
+            <p className="heading">Happy Clients</p>
+            
+            </div>
+        </div>
+        <div className="level-item has-text-centered">
+            <div>
+            <p className="title"><CountUp end={3} /></p>
+            <p className="heading">Years Experienced</p>
+            </div>
+        </div>
+        </section>
+    </>
     )
 }

@@ -17,6 +17,10 @@
 .is-fixed-top {
     animation: smooth 1s;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    .dot {
+        color: #1580BC;
+        transition: color 0.5s ease-in-out;
+    }
 }
 
 @keyframes smooth {
@@ -25,5 +29,25 @@
     }
     to {
         top: 0%
+    }
+}
+
+.navbar-menu {
+    .navbar-item:hover, .navbar-item.active {
+        &::before {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+    .navbar-item.active {
+        color: #1580BC;
+    }
+}
+
+
+
+.navbar-brand {
+    .navbar-item:hover {
+        color: black;
     }
 }

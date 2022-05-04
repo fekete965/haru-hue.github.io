@@ -10,9 +10,9 @@ export default function ProjectModal (props) {
         <div className="column is-4" id={id}>
             <div className="card">
                 <div className="card-image">
-                   {image ? <figure className="image">
-                        <img src={image} alt={name}/>
-                    </figure>: ""}
+                   {image && <figure className="image">
+                        <img src={require(`../images/${image}`)} alt={name}/>
+                    </figure>}
                 </div>
                 <div className="card-content">
                     <article>

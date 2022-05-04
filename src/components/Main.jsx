@@ -7,7 +7,7 @@ export default function Main () {
     options={{
       strings: ['Web Designer', 'Graphics Designer',
                 'UI/UX Designer', 'Front-end Developer',
-                'Student', 'Web Developer'],
+                'Freelancer', 'Web Developer'],
       autoStart: true,
       loop: true,
     }}
@@ -23,18 +23,18 @@ export default function Main () {
                                 <h1 className="title">I am a</h1>
                                 <h1 className="title" id="typewriter">{typetext}</h1>
                                 <div className="pt-5">
-                                    <button className="button is-medium cv-button">
+                                    <a href="../Uko Joshua CV.pdf"><button className="button is-medium">
                                         Download CV
-                                    </button>
-                                    <button className="button is-medium">
+                                    </button></a>
+                                   <a href="mailto:ukojoshy@gmail.com"><button className="button is-medium cv-button">
                                         Hire Me
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="column">
-                        <img src={image}/>
+                        <img src={image} alt="Joshua"/>
                     </div>
                 </div>
             </div>
