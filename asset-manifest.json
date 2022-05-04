@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.48edc670.css",
+    "main.js": "/static/js/main.9de6c3e5.js",
+    "static/media/computer-1.png": "/static/media/computer-1.47b09676dac9892a33f1.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/YAF-website.png": "/static/media/YAF-website.df7faee85b8762f58555.png",
+    "static/media/Memes.png": "/static/media/Memes.5dd2649b1d71e03030ff.png",
+    "static/media/MovieDB.png": "/static/media/MovieDB.d4eb1a811c42f4f5fa1b.png",
+    "static/media/black-boy2.png": "/static/media/black-boy2.9283e570b9e39c756303.png",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/travel-journal.png": "/static/media/travel-journal.0384b2a6fdca6533f90f.png",
+    "static/media/business-card.png": "/static/media/business-card.fcbef418f5ca5ab67a36.png",
+    "static/media/Programmer.jpg": "/static/media/Programmer.38c362ae90738680e1cb.jpg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/black-boy.png": "/static/media/black-boy.4eb07ebe92ee9f6d5132.png",
+    "static/media/Tenzies.png": "/static/media/Tenzies.f4193c680d1fb86e8924.png",
+    "index.html": "/index.html",
+    "main.48edc670.css.map": "/static/css/main.48edc670.css.map",
+    "main.9de6c3e5.js.map": "/static/js/main.9de6c3e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48edc670.css",
+    "static/js/main.9de6c3e5.js"
+  ]
+}
