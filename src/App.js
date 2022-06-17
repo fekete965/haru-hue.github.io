@@ -24,13 +24,13 @@ export default function App() {
   const [sectionInView, setSectionInView] = React.useState(null);
 
   const aboutRef = useNavObserver(Sections.About, setSectionInView, {
-    threshold: 0.5,
+    threshold: 0.9,
   });
   const skillRef = useNavObserver(Sections.Skills, setSectionInView, {
-    threshold: 0.5,
+    threshold: 0.8,
   });
   const projectRef = useNavObserver(Sections.Projects, setSectionInView, {
-    threshold: 0.5,
+    threshold: 0.4,
   });
   const resumeRef = useNavObserver(Sections.Resume, setSectionInView, {
     threshold: 0.5,
