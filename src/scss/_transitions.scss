@@ -12,23 +12,11 @@
 
 .navbar {
   transition: 0.75s all;
-}
-
-.is-fixed-top {
   animation: smooth 1s;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   .dot {
     color: #1580bc;
     transition: color 0.5s ease-in-out;
-  }
-}
-
-@keyframes smooth {
-  from {
-    top: -0.5%;
-  }
-  to {
-    top: 0%;
   }
 }
 

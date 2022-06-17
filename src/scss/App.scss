@@ -46,6 +46,14 @@ h6 {
   font-size: revert;
 }
 
+a,
+a:focus,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 #typewriter {
   color: #1580bc;
 }
@@ -61,6 +69,10 @@ button {
 //Navbar
 .navbar-item {
   display: flex;
+}
+
+.navbar-item:hover {
+  color: #1580bc;
 }
 
 .navbar-brand {
@@ -147,6 +159,11 @@ figure img {
   font-size: 25px;
   padding: 10px;
   @include icon-space();
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
 }
 
 .navbar-item:hover {
