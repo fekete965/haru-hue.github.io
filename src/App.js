@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import About from "./components/About";
@@ -18,38 +18,13 @@ import { Icon } from "@iconify/react";
 import { nanoid } from "nanoid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavObserver } from "./utils/hooks";
 
 const Sections = {
   About: "about",
   Skills: "skills",
   Projects: "projects",
   Resume: "resume",
-};
-
-const useNavObserver = (section, setSectionInView, observerOptions) => {
-  const elementRef = useRef(null);
-  const aboutElRef = React.useCallback(
-    (node) => {
-      if (elementRef.current) elementRef.current.disconnect();
-
-      elementRef.current = new IntersectionObserver(
-        (entries, observerOptions) => {
-          if (!entries[0]?.isIntersecting) {
-            setSectionInView(null);
-          } else {
-            setSectionInView(section);
-          }
-        },
-        observerOptions
-      );
-      if (node) {
-        elementRef.current.observe(node);
-      }
-    },
-    [section, observerOptions, setSectionInView]
-  );
-
-  return aboutElRef;
 };
 
 export default function App() {
