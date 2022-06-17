@@ -19,13 +19,7 @@ import { nanoid } from "nanoid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavObserver } from "./utils/hooks";
-
-const Sections = {
-  About: "about",
-  Skills: "skills",
-  Projects: "projects",
-  Resume: "resume",
-};
+import { Sections } from "./utils/constants";
 
 export default function App() {
   const [sectionInView, setSectionInView] = React.useState(null);
@@ -78,7 +72,7 @@ export default function App() {
       </div>
       <section
         className="container skills-section is-fluid has-text-centered"
-        id="skills"
+        id={Sections.Skills}
         ref={skillRef}
         data-aos="fade-down"
       >
@@ -88,11 +82,11 @@ export default function App() {
         </div>
       </section>
       <div data-aos="fade-down">
-        <Projects id="projects" projectRef={projectRef} />
+        <Projects projectRef={projectRef} />
       </div>
       <section
         className="container is-fluid section resume-section"
-        id="resume"
+        id={Sections.Resume}
         ref={resumeRef}
       >
         <h2 className="title has-text-centered is-uppercase has-text-white">

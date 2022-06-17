@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import React from "react";
 import project from "../data/project";
+import { Sections } from "../utils/constants";
 import ProjectModal from "./ProjectModal";
 
 export default function Projects({ projectRef }) {
@@ -18,7 +19,11 @@ export default function Projects({ projectRef }) {
   });
 
   return (
-    <section className="section project-section" ref={projectRef}>
+    <section
+      id={Sections.Projects}
+      className="section project-section"
+      ref={projectRef}
+    >
       <div className="container">
         <h2 className="title has-text-centered is-uppercase">Projects</h2>
         <div className="columns is-multiline">{modals}</div>

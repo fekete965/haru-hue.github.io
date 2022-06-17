@@ -2,11 +2,12 @@ import { Icon } from "@iconify/react";
 import React from "react";
 import programmer from "../images/Programmer.jpg";
 import CountUp from "react-countup";
+import { Sections } from "../utils/constants";
 
 export default function About({ aboutRef }) {
   return (
     <>
-      <section className="section" id="about" ref={aboutRef}>
+      <section className="section" id={Sections.About} ref={aboutRef}>
         <div className="container">
           <div className="columns is-centered">
             <div className="column pl-5 mb-5">
