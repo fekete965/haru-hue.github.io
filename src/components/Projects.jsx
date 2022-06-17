@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import React from "react";
 import project from "../data/project";
 import { Sections } from "../utils/constants";
@@ -8,7 +7,7 @@ export default function Projects({ projectRef }) {
   const modals = project.map(function (item, index) {
     return (
       <ProjectModal
-        key={nanoid()}
+        key={item.name}
         image={item.image}
         lang={item.lang}
         name={item.name}

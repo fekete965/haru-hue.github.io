@@ -15,7 +15,6 @@ import resume from "./data/resume";
 import "bulma/css/bulma.min.css";
 import "./scss/App.scss";
 import { Icon } from "@iconify/react";
-import { nanoid } from "nanoid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavObserver } from "./utils/hooks";
@@ -38,12 +37,12 @@ export default function App() {
   });
 
   const services = skill.map((item) => {
-    return <Skills key={nanoid()} icon={item.icon} name={item.name} />;
+    return <Skills key={item.name} icon={item.icon} name={item.name} />;
   });
   const job = resume.map((item) => {
     return (
       <Resume
-        key={nanoid()}
+        key={item.name}
         timeWorked={item.time}
         position={item.name}
         description={item.describe}
