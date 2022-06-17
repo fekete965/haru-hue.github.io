@@ -65,7 +65,7 @@ export default function App() {
   return (
     <>
       <Navbar sectionInView={sectionInView} />
-      <div data-aos="fade-down">
+      <div data-aos="fade-down" data-aos-once>
         <Main />
         <About aboutRef={aboutRef} />
       </div>
@@ -74,13 +74,14 @@ export default function App() {
         id={Sections.Skills}
         ref={skillRef}
         data-aos="fade-down"
+        data-aos-once
       >
         <div className="section container">
           <h2 className="title has-text-white is-uppercase">Skills</h2>
           <ul className="list">{services}</ul>
         </div>
       </section>
-      <div data-aos="fade-down">
+      <div data-aos="fade-down" data-aos-once>
         <Projects projectRef={projectRef} />
       </div>
       <section
@@ -96,7 +97,7 @@ export default function App() {
           {endresume}
         </VerticalTimeline>
       </section>
-      <div data-aos="fade-down">
+      <div data-aos="fade-down" data-aos-once>
         <Footer />
       </div>
     </>
