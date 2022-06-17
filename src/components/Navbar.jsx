@@ -1,30 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Sections } from "../utils/constants";
 
 export default function Navbar({ sectionInView }) {
   const [isActive, setisActive] = React.useState(false);
-  const [stickyClass, setStickyClass] = useState("");
-
-  useEffect(() => {
-    window.addEventListener("scroll", stickNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", stickNavbar);
-    };
-  }, []);
-
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 350 ? setStickyClass("is-fixed-top") : setStickyClass("");
-    }
-  };
 
   return (
-    <nav
-      className={`navbar ${stickyClass}`}
-      role="navigation"
-      aria-label="main-navigation"
-    >
+    <nav className="navbar" role="navigation" aria-label="main-navigation">
       <div className="container">
         <div className="navbar-brand">
           <a href="/#" className="navbar-item is-uppercased">
@@ -53,33 +34,29 @@ export default function Navbar({ sectionInView }) {
               className={`navbar-item ${
                 sectionInView === "about" ? "navbar-item active" : ""
               }`}
-              href="#about"
             >
-              About
+              <a href={`#${Sections.About}`}>About</a>
             </li>
             <li
               className={`navbar-item ${
                 sectionInView === "skills" ? "navbar-item active" : ""
               }`}
-              href="#skills"
             >
-              Skills
+              <a href={`#${Sections.Skills}`}>Skills</a>
             </li>
             <li
               className={`navbar-item ${
                 sectionInView === "projects" ? "navbar-item active" : ""
               }`}
-              href="#projects"
             >
-              Projects
+              <a href={`#${Sections.Projects}`}>Projects</a>
             </li>
             <li
               className={`navbar-item ${
                 sectionInView === "resume" ? "navbar-item active" : ""
               }`}
-              href="#resume"
             >
-              Resume
+              <a href={`#${Sections.Resume}`}>Resume</a>
             </li>
           </ul>
         </div>
