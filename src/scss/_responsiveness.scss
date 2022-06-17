@@ -1,11 +1,12 @@
 @media only screen and (max-width: 992px) {
-    .navbar-menu {
-        .navbar-item:hover, .navbar-item.active {
-            &::before {
-                visibility: visible;
-                width: 5%;
-                bottom: 0;
-            }
-        }
+  .navbar-menu {
+    .navbar-item:hover,
+    .navbar-item.active {
+      &::before {
+        visibility: visible;
+        width: 5%;
+        bottom: 0;
+      }
     }
+  }
 }

@@ -2,182 +2,190 @@
 @use "./responsiveness";
 
 :root {
-    --grey: #c4c4c4;
-    --section-color: #5D7A8B;
-    --text-color: #fff;
-    --icon-margin: 0px 5px;
+  --grey: #c4c4c4;
+  --section-color: #5d7a8b;
+  --text-color: #fff;
+  --icon-margin: 0px 5px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .whitetext {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 @mixin blue-background {
-    background: var(--section-color);
+  background: var(--section-color);
 }
 
 @mixin icon-space {
-    margin: var(--icon-margin);
+  margin: var(--icon-margin);
 }
 
-body, html {
-    scroll-behavior: smooth;
+body,
+html {
+  scroll-behavior: smooth;
 }
 
-body, html, button {
-    font-family: 'Poppins', sans-serif;
+body,
+html,
+button {
+  font-family: "Poppins", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: revert;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: revert;
 }
 
 #typewriter {
-    color: #1580BC;
+  color: #1580bc;
 }
 
 button {
-    @include icon-space()
+  @include icon-space();
 }
 
 .section {
-    padding: 6rem;
+  padding: 6rem;
 }
 
 //Navbar
 .navbar-item {
-    display: flex;
+  display: flex;
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 //Main
 .info {
-    padding-top: 10%;
+  padding-top: 10%;
 }
 .info h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 //About
 .about {
-    display: inline-block;
-    text-align: center;
-    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    padding: 15px 15px;
-    margin: 0 75px 30px;
+  display: inline-block;
+  text-align: center;
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 15px 15px;
+  margin: 0 75px 30px;
 }
 
 .about img {
-    width: 300px;
-    display: block;
+  width: 300px;
+  display: block;
 }
 
 figure img {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 //Card
 .skills-section .card {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .card {
-    box-shadow: none;
-    border: 1px solid rgb(0,0,0,.125);
+  box-shadow: none;
+  border: 1px solid rgb(0, 0, 0, 0.125);
 }
 
 .card-header {
-    background-color: var(--grey);
-    padding: 10px;
+  background-color: var(--grey);
+  padding: 10px;
 }
 
 .card-header svg {
-    @include icon-space();
+  @include icon-space();
 }
 
 //Skills
 .skills-section {
-    @include blue-background;
-    padding: 5%;
-    @extend .whitetext;
+  @include blue-background;
+  padding: 5%;
+  @extend .whitetext;
 }
 
 .list-item {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .skill-tile {
-    background-color: rgba(248,245,244,.05);
-    padding: 10px 10px 5px;
-    width: 100px;
-    margin: 5px 0;
-    border-radius: 8px;
+  background-color: rgba(248, 245, 244, 0.05);
+  padding: 10px 10px 5px;
+  width: 100px;
+  margin: 5px 0;
+  border-radius: 8px;
 }
 
-//Resume 
+//Resume
 .resume-section {
-    @include blue-background()
+  @include blue-background();
 }
 
 /*Footer CSS*/
 .footer-icons {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-icons svg {
-   font-size: 25px;
-   padding: 10px;
-    @include icon-space()
+  font-size: 25px;
+  padding: 10px;
+  @include icon-space();
 }
 
 .navbar-item:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar-menu .navbar-item {
-    margin: 2px 10px;
-    padding: 0;
+  margin: 2px 10px;
+  padding: 0;
 }
 
 .navbar-menu .navbar-item:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0.75rem;
-    left: 0;
-    background-color: #1580BC;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0.75rem;
+  left: 0;
+  background-color: #1580bc;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .level {
-    background: rgba(64, 176, 220, 0.1);
-    .title {
-        color: #1580BC;
-        font-weight: 800;
-    }
-    .heading {
-        font-weight: 700;
-        font-size: 17.5px;
-    }
-    &:not(:last-child) {
-        margin-bottom: 0;
-    }
+  background: rgba(64, 176, 220, 0.1);
+  .title {
+    color: #1580bc;
+    font-weight: 800;
+  }
+  .heading {
+    font-weight: 700;
+    font-size: 17.5px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .navbar-burger {
-    height: 5.25rem;
-    width: 4.25rem;
+  height: 5.25rem;
+  width: 4.25rem;
 }
